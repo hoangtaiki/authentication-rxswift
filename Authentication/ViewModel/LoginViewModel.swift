@@ -11,6 +11,11 @@ import RxSwift
 
 class LoginViewModel {
 
+    // Because we don't have backend api
+    // So that we will use below user for checking authorize
+    let userEmail = "duchoang.vp@gmail.com"
+    let userPassword = "12345678"
+
     let email = BehaviorRelay(value: "")
     let password = BehaviorRelay(value: "")
     let needLogin = PublishSubject<Void>()
@@ -18,7 +23,6 @@ class LoginViewModel {
     let isEmailValid: Driver<Bool>
     let isPasswordValid: Driver<Bool>
     let isEmailPasswordValid: Driver<Bool>
-
     var didLogin = PublishSubject<User>()
 
     let isLoading: Driver<Bool>
@@ -62,17 +66,28 @@ class LoginViewModel {
                         return Observable.empty()
                 }
             }
-            .delay(1, scheduler: MainScheduler.instance)
             .bind(to: didLogin)
             .disposed(by: disposeBag)
     }
 
     func logIn(email: String, password: String) -> Observable<User> {
-        let user = User(id: 1, name: "Parzival",
-                        email: email,
-                        avatarURL: URL(string: "https://i.imgur.com/xs16PGl.png"),
-                        phoneNumber: "+841244881992")
-        return Observable.just(user).delaySubscription(1, scheduler: MainScheduler.instance)
+        return Observable.create { observer in
+            if email == self.userEmail && password == self.userPassword {
+                let reponseUser = User(id: 1, name: "Parzival",
+                                       email: email,
+                                       avatarURL: URL(string: "https://i.imgur.com/xs16PGl.png"),
+                                       phoneNumber: "+841244881992")
+                observer.onNext(reponseUser)
+                observer.onCompleted()
+            } else {
+                let error = NSError(domain: "org.toprating.authentication", code: 1000,
+                                    userInfo: [NSLocalizedDescriptionKey: "The email or password is incorrect"])
+                observer.onError(error)
+            }
+
+            return Disposables.create()
+        }
+        .delaySubscription(1, scheduler: MainScheduler.instance)
     }
 
 }

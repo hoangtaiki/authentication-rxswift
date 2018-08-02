@@ -66,6 +66,12 @@ extension LoginViewController {
                 self?.showWelcomeView(forUser: user)
             }
             .disposed(by: disposeBag)
+
+        viewModel.error
+            .bind { [unowned self] (error) in
+                self.showMessage(title: "Error", message: error.localizedDescription)
+            }
+            .disposed(by: disposeBag)
     }
 
     private func bindViewModel() {

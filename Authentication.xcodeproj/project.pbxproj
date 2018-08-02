@@ -30,6 +30,7 @@
 		4D8D78CF21120671008FE5F3 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D78C42111DD33008FE5F3 /* ActivityIndicator.swift */; };
 		4D8D78D021120675008FE5F3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D78B92111B511008FE5F3 /* User.swift */; };
 		4D8D78D121120679008FE5F3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D78B72111B252008FE5F3 /* LoginViewModel.swift */; };
+		4DF9EB5521132DD800504371 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9EB5421132DD800504371 /* UIViewController.swift */; };
 		9BCBB92E0F1CD86093EAE1A9 /* Pods_AuthenticationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B532667FA2D0A477CC570BA6 /* Pods_AuthenticationTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		4D8D78BD2111C460008FE5F3 /* SignInViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModelTests.swift; sourceTree = "<group>"; };
 		4D8D78C42111DD33008FE5F3 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		4D8D78CA2112026A008FE5F3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		4DF9EB5421132DD800504371 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		90430449171D3696A64D79DA /* Pods-Authentication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authentication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Authentication/Pods-Authentication.debug.xcconfig"; sourceTree = "<group>"; };
 		B532667FA2D0A477CC570BA6 /* Pods_AuthenticationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthenticationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F515C7AE333D73F6E41C0E3A /* Pods-AuthenticationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthenticationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AuthenticationTests/Pods-AuthenticationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				4D8D78C42111DD33008FE5F3 /* ActivityIndicator.swift */,
+				4DF9EB5421132DD800504371 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF9EB5521132DD800504371 /* UIViewController.swift in Sources */,
 				4D8D78BA2111B511008FE5F3 /* User.swift in Sources */,
 				4D8D78C52111DD33008FE5F3 /* ActivityIndicator.swift in Sources */,
 				4D8D788821119B68008FE5F3 /* LoginViewController.swift in Sources */,
