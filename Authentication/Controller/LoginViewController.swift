@@ -33,6 +33,17 @@ class LoginViewController: UIViewController {
         addBackgroundGesture()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.isHidden = true
+
+        if navigationController!.viewControllers.count > 1 {
+            navigationController?.viewControllers.removeFirst()
+        }
+    }
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -118,7 +129,7 @@ extension LoginViewController {
         let welcomeVC = storyBoard.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
         welcomeVC.user = user
 
-        present(welcomeVC, animated: true, completion: nil)
+        navigationController?.pushViewController(welcomeVC, animated: true)
     }
 
 }

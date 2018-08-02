@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xot-57-Fyq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dZR-0l-jIx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -192,7 +192,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zmY-ge-GaU"/>
                     </scrollView>
+                    <navigationItem key="navigationItem" id="7dg-OB-fuL"/>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="emailTextField" destination="xD3-vp-Oen" id="ggO-n5-6MP"/>
                         <outlet property="passwordTextField" destination="GfW-8w-EHk" id="ald-et-1Qb"/>
@@ -202,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wt7-MF-5Wm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="157.87106446776613"/>
+            <point key="canvasLocation" x="1329" y="158"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="5Zb-bm-GEF">
@@ -226,14 +228,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83F-C6-MMO">
-                                <rect key="frame" x="151" y="591" width="72" height="44"/>
+                                <rect key="frame" x="155.5" y="591" width="63" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Tl4-gW-mFX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
-                                <state key="normal" title="Enter App">
+                                <state key="normal" title="Sign Out">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signOutTap:" destination="hYA-1U-DV4" eventType="touchUpInside" id="VWr-FD-OdA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1843137255" green="0.25490196079999999" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -254,7 +259,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhn-v2-wY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="158"/>
+            <point key="canvasLocation" x="2120.8000000000002" y="157.87106446776613"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iP0-nt-rSN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dZR-0l-jIx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zwH-re-uvh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xot-57-Fyq" kind="relationship" relationship="rootViewController" id="ah7-Ws-6Rx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIP-k1-fDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="157.87106446776613"/>
         </scene>
     </scenes>
     <resources>

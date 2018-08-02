@@ -20,10 +20,21 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
 
         avatarImageView.kf.setImage(with: user.avatarURL)
-        welcomeLabel.text = "Welcome back \(user.name)!"
+        welcomeLabel.text = "Welcome back, \(user.name)!"
     }
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    @IBAction func signOutTap(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+
+        navigationController?.pushViewController(loginVC, animated: true)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if navigationController!.viewControllers.count > 1 {
+            navigationController?.viewControllers.removeFirst()
+        }
     }
 }
