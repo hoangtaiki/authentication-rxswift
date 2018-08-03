@@ -43,7 +43,7 @@ pod install
 
 ## Run Project
 
-You can run project by Xcode to use application. But use below code to build `Application File` usable with Appium. 
+You can run project by Xcode to use application. But use below code to build `Application File` usable with Appium. 
 ```
 xcodebuild -workspace Authentication.xcworkspace -scheme Authentication -sdk iphonesimulator11.4
 ```
