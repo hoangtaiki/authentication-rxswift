@@ -24,12 +24,18 @@
                                     <constraint firstAttribute="width" constant="96" id="K8u-LW-CiZ"/>
                                     <constraint firstAttribute="height" constant="96" id="pCu-RO-j17"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="avatarImageView"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellcome back, Parzival!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ox-CS-0Nw">
                                 <rect key="frame" x="75" y="232" width="226" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="welcomeLabel"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83F-C6-MMO">
                                 <rect key="frame" x="155.5" y="591" width="63" height="44"/>
@@ -40,6 +46,9 @@
                                 <state key="normal" title="Sign Out">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="signOutButton"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signOutTap:" destination="hYA-1U-DV4" eventType="touchUpInside" id="VWr-FD-OdA"/>
                                 </connections>
