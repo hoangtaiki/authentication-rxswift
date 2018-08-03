@@ -19,7 +19,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet var scrollView: UIScrollView!
 
     let textValidColor = UIColor.white.withAlphaComponent(0.87)
     let textInvalidColor = UIColor.white.withAlphaComponent(0.4)
@@ -30,7 +29,6 @@ class LoginViewController: UIViewController {
         bindUI()
         bindViewModel()
         updateControlStatus()
-        addBackgroundGesture()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -117,17 +115,6 @@ extension LoginViewController {
                 self.emailTextField.textColor = isValid ? self.textValidColor : self.textInvalidColor
             })
             .disposed(by: disposeBag)
-    }
-
-    private func addBackgroundGesture() {
-        let tapBackground = UITapGestureRecognizer()
-        tapBackground.rx.event
-            .bind { [weak self] _ in
-                self?.view.endEditing(true)
-            }
-            .disposed(by: disposeBag)
-
-        scrollView.addGestureRecognizer(tapBackground)
     }
 
     private func showWelcomeView(forUser user: User) {
