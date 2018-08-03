@@ -30,6 +30,7 @@
 		4D8D78CF21120671008FE5F3 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D78C42111DD33008FE5F3 /* ActivityIndicator.swift */; };
 		4D8D78D021120675008FE5F3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D78B92111B511008FE5F3 /* User.swift */; };
 		4D8D78D121120679008FE5F3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D78B72111B252008FE5F3 /* LoginViewModel.swift */; };
+		4DBD62C521149F2200E55333 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9EB5421132DD800504371 /* UIViewController.swift */; };
 		4DF9EB5521132DD800504371 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9EB5421132DD800504371 /* UIViewController.swift */; };
 		9BCBB92E0F1CD86093EAE1A9 /* Pods_AuthenticationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B532667FA2D0A477CC570BA6 /* Pods_AuthenticationTests.framework */; };
 /* End PBXBuildFile section */
@@ -444,6 +445,7 @@
 				4D8D78C32111D123008FE5F3 /* User.swift in Sources */,
 				4D8D78C72111DFB9008FE5F3 /* ActivityIndicator.swift in Sources */,
 				4D8D78BF2111C553008FE5F3 /* LoginViewModel.swift in Sources */,
+				4DBD62C521149F2200E55333 /* UIViewController.swift in Sources */,
 				4D8D78CC2112066A008FE5F3 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,8 +33,14 @@ class WelcomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        navigationController?.navigationBar.barStyle = .black
+
         if navigationController!.viewControllers.count > 1 {
             navigationController?.viewControllers.removeFirst()
         }
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
