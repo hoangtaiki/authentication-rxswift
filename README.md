@@ -11,10 +11,10 @@
 
 
 ## Requirements
-- Xcode 9 or later
+- Xcode 10 or later
 - iOS 10.0 or later
 - ARC
-- Swift 4.0 or later
+- Swift 4.2 or later
 
 ## Setup Tools
 
@@ -45,9 +45,9 @@ pod install
 
 You can run project by Xcode to use application. But use below code to build `Application File` usable with Appium. 
 ```
-xcodebuild -workspace Authentication.xcworkspace -scheme Authentication -sdk iphonesimulator11.4
+xcodebuild -workspace Authentication.xcworkspace -scheme Authentication -sdk iphonesimulator12.0
 ```
-We use `iphonesimulator11.4` is the target SDK we need build. You can change it. With list SDKs version you have by:
+We use `iphonesimulator12.0` is the target SDK we need build. You can change it. With list SDKs version you have by:
 ```
 xcodebuild -showsdks
 ```
