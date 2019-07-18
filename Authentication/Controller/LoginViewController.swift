@@ -98,7 +98,7 @@ extension LoginViewController {
             .disposed(by: disposeBag)
 
         emailTextField.rx
-            .controlEvent(UIControlEvents.editingDidEnd)
+            .controlEvent(UIControl.Event.editingDidEnd)
             .asDriver()
             .withLatestFrom(viewModel.isEmailValid)
             .drive(onNext: { [unowned self] isValid in
@@ -107,8 +107,8 @@ extension LoginViewController {
             .disposed(by: disposeBag)
 
         Driver.combineLatest(
-            emailTextField.rx.controlEvent(UIControlEvents.editingChanged).asDriver(),
-            emailTextField.rx.controlEvent(UIControlEvents.editingDidEnd).asDriver(),
+            emailTextField.rx.controlEvent(UIControl.Event.editingChanged).asDriver(),
+            emailTextField.rx.controlEvent(UIControl.Event.editingDidEnd).asDriver(),
             resultSelector: { _,_ in return () })
             .withLatestFrom(viewModel.isEmailValid)
             .drive(onNext: { [unowned self] isValid in

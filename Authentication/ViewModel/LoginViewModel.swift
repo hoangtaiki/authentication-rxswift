@@ -86,8 +86,8 @@ class LoginViewModel {
             }
 
             return Disposables.create()
-        }
-        .delaySubscription(1, scheduler: MainScheduler.instance)
+            
+        }.delaySubscription(DispatchTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
     }
 
 }
